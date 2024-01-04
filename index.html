@@ -8,18 +8,39 @@
         <script src="https://kit.fontawesome.com/a613fad486.js" crossorigin="anonymous"></script>
         <link rel="shortcut icon" type="x-icon" href="icon.png">
     </head>
-    <body>
+    <body onload="run()">
         
         <div class="container">
             <div class="left">
                 <label><i class="fa-brands fa-html5"></i> HTML</label>
-                <textarea id="html-code" onkeyup="run()"></textarea>
+                <textarea id="html-code" onkeyup="run()"><h1>Welcome to your first LiveCode Website!</h1>
+                    <h4>LiveCode is a online code editor for html,css,js, the code may look messy in the tabs but whatever. For a example of what you can make, heres a simple button game:</h4>
+                    <br>
+                    <button id='btn'>Click For Cash</button>
+                    <br>
+                    <h3>Cash: <span id='m'>0</span></h3></textarea>
 
                 <label><i class="fa-brands fa-css3"></i> CSS</label>
-                <textarea id="css-code" onkeyup="run()"></textarea>
+                <textarea id="css-code" onkeyup="run()">*{
+                    font-family: consolas;
+                    user-select: none;
+                   }
+                                      
+                   button{
+                    background-color: black;
+                    color: white;
+                    cursor: pointer;
+                   }</textarea>
 
                 <label><i class="fa-brands fa-square-js"></i> JS</label>
-                <textarea id="js-code" onkeyup="run()"></textarea>
+                <textarea id="js-code" onkeyup="run()">var btn = document.getElementById('btn')
+                    var money = 0
+                    var spanM = document.getElementById('m')
+                                        
+                    btn.onclick = function() {
+                     money += 1
+                     spanM.innerHTML = money;
+                    }</textarea>
             </div>
             <div class="right">
                 <label><i class="fa-regular fa-circle-play"></i> Output</label>
